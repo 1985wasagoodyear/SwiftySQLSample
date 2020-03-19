@@ -61,7 +61,7 @@ Of notability, the following CRUD functions are implemented:
 
 ### Create Entry
 * `SQLiteManager+Create.swift`
-* can press the `+` button at the top-left to call `addItemButtonAction` in `DatesListController`
+* can press the `+` button at the top-right to call `addItemButtonAction` in `DatesListController`
 * sets the current date and sets a random hexidecimal value for the name
 * saves the entry within SQLite
 
