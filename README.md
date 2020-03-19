@@ -45,7 +45,9 @@ This gives us three options.
 * 2. Use Objective-C as an intermediary for C-level SQLite, which we can then interface with, using Swift.
 * 3. Use an existing framework that does 2. because it is a solved problem.
 
-We will be using approach 3, with [fmdb](https://github.com/ccgus/fmdb).
+We will be using approach 3, with [fmdb](https://github.com/ccgus/fmdb). 
+
+fmdb also addresses some of the other issues with SQLite databases (none of which are addressed here).
 
 
 ## 4. Notable Classes
