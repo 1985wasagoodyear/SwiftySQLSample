@@ -11,10 +11,9 @@
 import Foundation
 
 extension String {
-    // from 0x10000000 to 0xffffffff
-    // is there an easier way to write fixed-width 8-character hex strings?
     static var randomHex: String {
-        String(format: "#%02X",
-               Int.random(in: 268_435_456...4_294_967_295))
+        let range = 0x00000000...0xffffffff
+        return String(format: "#%08X",
+               Int.random(in: range))
     }
 }

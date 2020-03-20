@@ -20,4 +20,12 @@ extension SQLiteManager {
         """
         try executeUpdate(updateSql)
     }
+    
+    func deleteAll(from tableName: String) throws {
+        let updateSql =
+        """
+        DELETE FROM \(tableName);
+        """
+        try executeUpdate(updateSql)
+    }
 }

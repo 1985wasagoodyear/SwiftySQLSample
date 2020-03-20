@@ -72,6 +72,11 @@ class DatesListController: UIViewController {
         reloadItems()
     }
     
+    @IBAction func destroyItemsButtonAction(_ sender: Any) {
+        try? manager.deleteAll(from: "DateItem")
+        reloadItems()
+    }
+    
     // MARK: - SQLite Manager Helper Methods
     
     func reloadItems() {

@@ -31,6 +31,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="vWl-hj-Mwv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="OsS-95-D2b">
+                            <connections>
+                                <action selector="destroyItemsButtonAction:" destination="BYZ-38-t0r" id="CzD-am-lhG"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="J65-fG-AMG">
                             <connections>
                                 <action selector="addItemButtonAction:" destination="BYZ-38-t0r" id="1JY-xx-hZ7"/>
