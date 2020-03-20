@@ -14,17 +14,13 @@ import FMDB
 extension SQLiteManager {
     
     func update(_ item: DateItem, with name: String) throws {
-        let query =
+        let updateSql =
         """
         UPDATE DateItem
         SET name = '\(name)'
         WHERE id = \(item.dateId);
         """
         
-        do {
-            try database.executeUpdate(query, values: [])
-        } catch {
-            throw SQLiteManagerError.queryError(error)
-        }
+        try executeUpdate(updateSql)
     }
 }

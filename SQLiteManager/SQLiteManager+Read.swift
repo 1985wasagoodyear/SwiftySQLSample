@@ -13,10 +13,10 @@ import FMDB
 
 extension SQLiteManager {
     func fetchAll() throws -> [DateItem] {
-        let query = "SELECT * FROM DateItem"
+        let sqlQuery = "SELECT * FROM DateItem"
         
         do {
-            let sqlResults: FMResultSet = try database.executeQuery(query,
+            let sqlResults: FMResultSet = try database.executeQuery(sqlQuery,
                                                                     values: [])
             var results: [DateItem] = []
             while sqlResults.next() {
@@ -28,7 +28,8 @@ extension SQLiteManager {
                                     dateString: date)
                 results.append(item)
             }
-            currId = results.max { $0.dateId > $1.dateId }?.dateId ?? 0
+            currId = results.max { $0.dateId < $1.dateId }?.dateId ?? 0
+            
             return results
         } catch {
             throw SQLiteManagerError.queryError(error)

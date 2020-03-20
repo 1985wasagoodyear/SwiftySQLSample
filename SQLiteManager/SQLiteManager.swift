@@ -20,7 +20,7 @@ class SQLiteManager {
 
     var databasePath: String?
     let database: FMDatabase
-    var currId: Int = 0
+    var currId: Int = 0 
     
     required init(path databasePath: String? = nil) throws {
         self.databasePath = databasePath

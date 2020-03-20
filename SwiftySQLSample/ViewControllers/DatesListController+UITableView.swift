@@ -29,6 +29,7 @@ extension DatesListController: UITableViewDataSource {
         
         cell.nameLabel.text = item.name
         cell.dateCreatedLabel.text = "Date created: " + item.dateString
+        cell.containerView.backgroundColor = UIColor(hex: item.name)
         
         return cell
     }
@@ -45,7 +46,6 @@ extension DatesListController: UITableViewDelegate {
         return UISwipeActionsConfiguration(actions: [action])
     }
     #endif
-    trailingSwipeActionsConfigurationForRowAt
     func tableView(_ tableView: UITableView,
                    editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let action = UITableViewRowAction(style: .destructive, title: "DELETE!") { (_, _) in

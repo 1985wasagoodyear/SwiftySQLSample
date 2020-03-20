@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5E13832424F1C900133F23 /* UIKit+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E13822424F1C900133F23 /* UIKit+Utility.swift */; };
 		3F618E43242320AA002C38C4 /* SQLiteManager+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F618E42242320AA002C38C4 /* SQLiteManager+Create.swift */; };
 		3F618E45242320B2002C38C4 /* SQLiteManager+Read.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F618E44242320B2002C38C4 /* SQLiteManager+Read.swift */; };
 		3F618E47242320B9002C38C4 /* SQLiteManager+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F618E46242320B9002C38C4 /* SQLiteManager+Update.swift */; };
@@ -22,11 +23,14 @@
 		3F6D8026242313320040D19C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D8024242313320040D19C /* LaunchScreen.storyboard */; };
 		3F6D8030242319CE0040D19C /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D802F242319CE0040D19C /* SQLiteManager.swift */; };
 		3F6D803324231B140040D19C /* SQLiteManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D803224231B140040D19C /* SQLiteManagerError.swift */; };
+		3FBF4F462424ECCF00CA9D69 /* SQLiteManager+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF4F452424ECCF00CA9D69 /* SQLiteManager+Helper.swift */; };
+		3FBF4F492424EDAD00CA9D69 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF4F482424EDAD00CA9D69 /* String+Utility.swift */; };
 		80F645CFF039084EFAD24FEC /* Pods_SwiftySQLSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A6AE73E01BAE32CCD15C33 /* Pods_SwiftySQLSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B77E4FC7809AA28AE56FA62 /* Pods-SwiftySQLSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySQLSample.release.xcconfig"; path = "Target Support Files/Pods-SwiftySQLSample/Pods-SwiftySQLSample.release.xcconfig"; sourceTree = "<group>"; };
+		3F5E13822424F1C900133F23 /* UIKit+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Utility.swift"; sourceTree = "<group>"; };
 		3F618E42242320AA002C38C4 /* SQLiteManager+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SQLiteManager+Create.swift"; sourceTree = "<group>"; };
 		3F618E44242320B2002C38C4 /* SQLiteManager+Read.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SQLiteManager+Read.swift"; sourceTree = "<group>"; };
 		3F618E46242320B9002C38C4 /* SQLiteManager+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SQLiteManager+Update.swift"; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 		3F6D802D2423133E0040D19C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3F6D802F242319CE0040D19C /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		3F6D803224231B140040D19C /* SQLiteManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManagerError.swift; sourceTree = "<group>"; };
+		3FBF4F452424ECCF00CA9D69 /* SQLiteManager+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SQLiteManager+Helper.swift"; sourceTree = "<group>"; };
+		3FBF4F482424EDAD00CA9D69 /* String+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
 		CBA75F63C64C195CBC0C482D /* Pods-SwiftySQLSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySQLSample.debug.xcconfig"; path = "Target Support Files/Pods-SwiftySQLSample/Pods-SwiftySQLSample.debug.xcconfig"; sourceTree = "<group>"; };
 		E7A6AE73E01BAE32CCD15C33 /* Pods_SwiftySQLSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySQLSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,11 +90,11 @@
 		3F6D8018242313310040D19C /* SwiftySQLSample */ = {
 			isa = PBXGroup;
 			children = (
-				3F6D801D242313310040D19C /* DatesListController.swift */,
-				3F618E5024232F8D002C38C4 /* DatesListController+UITableView.swift */,
-				3F618E4E24232693002C38C4 /* DateItem.swift */,
-				3F618E4A242325A1002C38C4 /* DateItemTableViewCell.swift */,
-				3F618E4B242325A1002C38C4 /* DateItemTableViewCell.xib */,
+				3FBF4F4B2424EDC200CA9D69 /* ViewControllers */,
+				3FBF4F4A2424EDB700CA9D69 /* Custom Views */,
+				3FBF4F472424ED9E00CA9D69 /* Model */,
+				3FBF4F482424EDAD00CA9D69 /* String+Utility.swift */,
+				3F5E13822424F1C900133F23 /* UIKit+Utility.swift */,
 				3F6D8019242313310040D19C /* AppDelegate.swift */,
 				3F6D801F242313310040D19C /* Main.storyboard */,
 				3F6D8022242313320040D19C /* Assets.xcassets */,
@@ -107,8 +113,35 @@
 				3F618E44242320B2002C38C4 /* SQLiteManager+Read.swift */,
 				3F618E46242320B9002C38C4 /* SQLiteManager+Update.swift */,
 				3F618E48242320C0002C38C4 /* SQLiteManager+Delete.swift */,
+				3FBF4F452424ECCF00CA9D69 /* SQLiteManager+Helper.swift */,
 			);
 			path = SQLiteManager;
+			sourceTree = "<group>";
+		};
+		3FBF4F472424ED9E00CA9D69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F618E4E24232693002C38C4 /* DateItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FBF4F4A2424EDB700CA9D69 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F618E4A242325A1002C38C4 /* DateItemTableViewCell.swift */,
+				3F618E4B242325A1002C38C4 /* DateItemTableViewCell.xib */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		3FBF4F4B2424EDC200CA9D69 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F6D801D242313310040D19C /* DatesListController.swift */,
+				3F618E5024232F8D002C38C4 /* DatesListController+UITableView.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		5FC9138FD8C959D7C036EA33 /* Pods */ = {
@@ -264,8 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F618E49242320C0002C38C4 /* SQLiteManager+Delete.swift in Sources */,
+				3FBF4F462424ECCF00CA9D69 /* SQLiteManager+Helper.swift in Sources */,
 				3F6D8030242319CE0040D19C /* SQLiteManager.swift in Sources */,
 				3F618E45242320B2002C38C4 /* SQLiteManager+Read.swift in Sources */,
+				3FBF4F492424EDAD00CA9D69 /* String+Utility.swift in Sources */,
+				3F5E13832424F1C900133F23 /* UIKit+Utility.swift in Sources */,
 				3F6D801E242313310040D19C /* DatesListController.swift in Sources */,
 				3F618E47242320B9002C38C4 /* SQLiteManager+Update.swift in Sources */,
 				3F618E5124232F8D002C38C4 /* DatesListController+UITableView.swift in Sources */,

@@ -17,7 +17,7 @@ extension SQLiteManager {
             throw SQLiteManagerError.tableAlreadyExists
         }
         
-        let query =
+        let updateSql =
         """
         CREATE TABLE DateItem
         (
@@ -26,26 +26,19 @@ extension SQLiteManager {
             date varchar(255)
         );
         """
-        do {
-            try database.executeUpdate(query, values: [])
-        } catch {
-            throw SQLiteManagerError.queryError(error)
-        }
+        
+        try executeUpdate(updateSql)
     }
     
     func makeDateItem(name: String, date: String) throws {
         currId += 1
         
-        let query =
+        let updateSql =
         """
         INSERT INTO DateItem (id, name, date)
         VALUES ('\(currId)', '\(name)', '\(date)');
         """
         
-        do {
-            try database.executeUpdate(query, values: [])
-        } catch {
-            throw SQLiteManagerError.queryError(error)
-        }
+        try executeUpdate(updateSql)
     }
 }

@@ -13,17 +13,11 @@ import FMDB
 
 extension SQLiteManager {
     func delete(_ item: DateItem, from tableName: String) throws {
-        let query =
+        let updateSql =
         """
         DELETE FROM \(tableName)
         WHERE id = \(item.dateId);
         """
-        
-        do {
-            try database.executeUpdate(query, values: [])
-        } catch {
-            throw SQLiteManagerError.queryError(error)
-        }
-        
+        try executeUpdate(updateSql)
     }
 }

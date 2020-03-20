@@ -13,4 +13,9 @@ import UIKit
 class DateItemTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var dateCreatedLabel: UILabel!
+    @IBOutlet var containerView: UIView! {
+        didSet {
+            containerView.roundify()
+        }
+    }
 }

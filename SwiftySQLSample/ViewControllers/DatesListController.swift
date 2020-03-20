@@ -20,6 +20,7 @@ class DatesListController: UIViewController {
         didSet {
             tableView.dataSource = self
             tableView.delegate = self
+            tableView.backgroundView = UIView()
             let nib = UINib(nibName: "DateItemTableViewCell", bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: reuseID)
         }

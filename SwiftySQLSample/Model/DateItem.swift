@@ -15,10 +15,3 @@ struct DateItem {
     let name: String
     let dateString: String
 }
-
-extension String {
-    static var randomHex: String {
-        String(format: "%02X",
-               Int.random(in: 100_000_000...999_999_999))
-    }
-}
