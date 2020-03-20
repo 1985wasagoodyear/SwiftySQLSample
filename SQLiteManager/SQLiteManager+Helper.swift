@@ -20,3 +20,26 @@ extension SQLiteManager {
         }
     }
 }
+
+extension Array where Element == DateItem {
+    init(from resultSet: FMResultSet) {
+        self = []
+        reserveCapacity(Int(resultSet.columnCount))
+        while resultSet.next() {
+            guard let item = DateItem(resultSet: resultSet) else { return }
+            append(item)
+        }
+    }
+}
+
+extension DateItem {
+    init?(resultSet: FMResultSet) {
+        guard let name = resultSet.string(forColumn: "name"),
+            let date = resultSet.string(forColumn: "date")
+            else { return nil }
+        let dateId = Int(resultSet.int(forColumn: "id"))
+        self = DateItem(dateId: dateId,
+                        name: name,
+                        dateString: date)
+    }
+}

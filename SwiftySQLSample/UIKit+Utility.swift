@@ -16,12 +16,14 @@ extension UIColor {
         // ensure the hexidecimal string is of the proper length & form
         guard hex.hasPrefix("#"), hex.count == 9 else { return nil }
         
+        // get the hex value
         let hexColor = String(hex.dropFirst())
         let scanner = Scanner(string: hexColor)
 
         var hexNumber: UInt64 = 0
         guard scanner.scanHexInt64(&hexNumber) else { return nil }
         
+        // transform into color components
         let red = CGFloat((hexNumber & 0xff000000) >> 24) / 255
         let green = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
         let blue = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
